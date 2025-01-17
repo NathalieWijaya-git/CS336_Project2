@@ -19,7 +19,7 @@ public class DemoApplication {
 		
 		String url = "jdbc:postgresql://127.0.0.1:5432/project1db";
         String username = "postgres";
-        String password = "@EdwardWijaya04";
+        String password = "1234";
 
 		try(Connection conn = DriverManager.getConnection(url, username, password)) {
 
