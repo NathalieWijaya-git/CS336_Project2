@@ -76,7 +76,7 @@ public class MortgageProcessor {
         }
 
         //Start a connection and set the transaction isolation level to SERIALIZABLE
-        try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+        try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
             //Set the transaction isolation level to SERIALIZABLE
             conn.setAutoCommit(false);  //Disable auto-commit
             conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);  //Set isolation level
@@ -129,7 +129,7 @@ public class MortgageProcessor {
             System.err.println("Error with transaction: " + e.getMessage());
         } finally {
             //Explicitly drop the temporary table
-            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
                 String dropTableQuery = "DROP TABLE IF EXISTS temp_filtered_results";
                 try (Statement stmt = conn.createStatement()) {
                     stmt.executeUpdate(dropTableQuery);
@@ -140,7 +140,7 @@ public class MortgageProcessor {
             }
             
             //Reset auto-commit to true after transaction
-            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
                 conn.setAutoCommit(true);  // Ensure auto-commit is reset to true if needed
             } catch (SQLException e) {
                 System.err.println("Error resetting auto-commit: " + e.getMessage());
