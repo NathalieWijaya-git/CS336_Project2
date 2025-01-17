@@ -907,7 +907,7 @@ public class FilterManager {
         } else { //Switch cases for each filter option
             System.out.println("You selected filter number: " + filterChoice + ".");
             //Create temp_result table to store initially filtered results
-            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                 //Create the empty temp table that will store the filtered results
                 String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -1968,7 +1968,7 @@ public class FilterManager {
                     filterByMsamd(setMsamdValue());
 
                     //Create the temp table for it (to apply filters for other methods)                   
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -2108,7 +2108,7 @@ public class FilterManager {
                     filterByIncomeToDebtRatio(setMinRatio(), setMaxRatio());
 
                     //Create the temp table for it (to apply filters for other methods)
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -2251,7 +2251,7 @@ public class FilterManager {
                     filterByCounty(setCountyNames());
 
                     //Create the temp table for it (to apply filters for other methods)
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -2387,7 +2387,7 @@ public class FilterManager {
                     filterByLoanType(setLoanTypeValue());
 
                     //Create the temp table for it (to apply filters for other methods)
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -2520,7 +2520,7 @@ public class FilterManager {
                     filterByTractToMsamdIncome(setMinNum(), setMaxNum());
 
                     //Create the temp table for it (to apply filters for other methods)
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -2658,7 +2658,7 @@ public class FilterManager {
                     filterByLoanPurpose(setLoanPurposeName());
 
                     //Create the temp table for it (to apply filters for other methods)
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -2796,7 +2796,7 @@ public class FilterManager {
                     filterByPropertyType(setPropertyTypeName());
 
                     //Create the temp table for it (to apply filters for other methods)
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
@@ -2932,7 +2932,7 @@ public class FilterManager {
                     filterByOwnerOccupancy(setOwnerOccupancyName());
 
                     //Create the temp table for it (to apply filters for other methods)
-                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "@EdwardWijaya04")) {
+                    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project1db", "postgres", "1234")) {
 
                         //Create the empty temp table that will store the filtered results
                         String createTempTableQuery = "CREATE TEMP TABLE temp_results (applicant_id INTEGER, action_taken INTEGER, purchaser_type INTEGER, msamd TEXT, applicant_income_000s INTEGER, loan_amount_000s INTEGER, county_code TEXT, loan_type INTEGER, tract_to_msamd_income INTEGER, loan_purpose INTEGER, property_type INTEGER, owner_occupancy INTEGER, lien_status INTEGER, rate_spread NUMERIC(10,5))";
